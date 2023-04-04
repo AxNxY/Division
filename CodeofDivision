@@ -1,0 +1,31 @@
+void divide(int dividend, int divisor, int &result, int &remainder) 
+{
+// if divisor is zero, we cannot compute the division!
+if (divisor == 0) 
+{
+  result = 0;
+  remainder = 0;
+  return;
+ }
+ 
+ int i = 0;
+ bool stop = false;
+ 
+// loop until flag is true
+while (!stop) 
+{
+    int prod = divisor * i; 
+    if (dividend < prod)
+    {
+        result = i-1;
+        remainder = dividend - (divisor*(i-1));
+        
+        stop = true;
+        
+    }
+    else
+      i++;
+    
+
+}
+
